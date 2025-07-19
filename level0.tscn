@@ -1,0 +1,37 @@
+[gd_scene load_steps=7 format=3 uid="uid://5i5aeuoa3b8w"]
+
+[ext_resource type="Script" uid="uid://dx24ot83qn7do" path="res://Level.cs" id="1_f02tp"]
+[ext_resource type="PackedScene" uid="uid://ddcanns6dfmva" path="res://kenney_toy-car-kit/Models/GLB format/track-road-wide-straight-bump-down.glb" id="2_04g2k"]
+[ext_resource type="PackedScene" uid="uid://b13u5b8j21hmm" path="res://kenney_toy-car-kit/Models/GLB format/track-road-narrow-straight.glb" id="3_vxl8l"]
+[ext_resource type="PackedScene" uid="uid://cv3ik4wtsiksx" path="res://kenney_toy-car-kit/Models/GLB format/item-coin-silver.glb" id="4_xwjtr"]
+[ext_resource type="PackedScene" uid="uid://dh1k0tikkq8vs" path="res://kenney_toy-car-kit/Models/GLB format/item-coin-bronze.glb" id="5_0i0an"]
+
+[sub_resource type="Environment" id="Environment_f02tp"]
+
+[node name="Node3D" type="Node3D"]
+script = ExtResource("1_f02tp")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.79472, 15.1116)
+projection = 1
+size = 15.865
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="track-road-wide-straight-bump-down2" parent="." instance=ExtResource("2_04g2k")]
+transform = Transform3D(-0.0554555, 0, -0.998461, 0, 1, 0, 0.998461, 0, -0.0554555, -10.506, 2.194, 0)
+
+[node name="track-road-narrow-straight2" parent="." instance=ExtResource("3_vxl8l")]
+transform = Transform3D(-0.0583656, 0, -0.998295, 0, 1, 0, 0.998295, 0, -0.0583656, 14.2623, 1.752, 0)
+
+[node name="item-coin-silver2" parent="." instance=ExtResource("4_xwjtr")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.01806, 14.7757, 36.4859)
+
+[node name="item-coin-bronze2" parent="." instance=ExtResource("5_0i0an")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.08571, 14.7049, 36.6352)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_f02tp")
+
+[editable path="track-road-wide-straight-bump-down2"]
+[editable path="track-road-narrow-straight2"]
