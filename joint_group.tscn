@@ -1,14 +1,54 @@
 [gd_scene load_steps=3 format=3 uid="uid://b7wey6jc377ii"]
 
-[ext_resource type="Script" uid="uid://crq4mwb2no2fn" path="res://JointGroup.cs" id="1_l1sf5"]
-[ext_resource type="Texture2D" uid="uid://qtd7x8cqfhqd" path="res://kenney_input-prompts_1.4/Generic/Vector/generic_button_circle_fill.svg" id="2_4k412"]
+[ext_resource type="PackedScene" uid="uid://bk2sfejyygtym" path="res://kenney_conveyor-kit/Models/GLB format/floor.glb" id="1_l1sf5"]
+[ext_resource type="PackedScene" uid="uid://d15lmdimme4ly" path="res://kenney_conveyor-kit/Models/GLB format/cover-top.glb" id="2_4k412"]
 
-[node name="JointGroup" type="Node3D" node_paths=PackedStringArray("_button")]
-script = ExtResource("1_l1sf5")
-_button = NodePath("Button")
+[node name="Level0" type="Node3D"]
 
-[node name="Button" type="Button" parent="."]
-offset_right = 8.0
-offset_bottom = 8.0
-icon = ExtResource("2_4k412")
-flat = true
+[node name="floor2" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48856, 2.6003, -3)
+
+[node name="cover-top2" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.48856, 1.6003, -3)
+
+[node name="floor3" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48856, 2.6003, -3)
+
+[node name="cover-top3" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.48856, 1.6003, -3)
+
+[node name="floor4" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51144, 2.6003, -3)
+
+[node name="cover-top4" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.51144, 1.6003, -3)
+
+[node name="floor5" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51144, 2.6003, -3)
+
+[node name="cover-top5" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.51144, 1.6003, -3)
+
+[node name="floor6" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.48856, 2.6003, -3)
+
+[node name="cover-top6" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.48856, 1.6003, -3)
+
+[node name="floor7" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.48856, 2.6003, -3)
+
+[node name="cover-top7" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.48856, 1.6003, -3)
+
+[node name="floor8" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.51144, 2.6003, -3)
+
+[node name="cover-top8" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.51144, 1.6003, -3)
+
+[node name="floor9" parent="." instance=ExtResource("1_l1sf5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51144, 2.6003, -3)
+
+[node name="cover-top9" parent="." instance=ExtResource("2_4k412")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.51144, 1.6003, -3)

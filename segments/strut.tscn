@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bspt42cdpvw4p"]
+
+[ext_resource type="Script" uid="uid://bhncmqksfj0xv" path="res://Segment.cs" id="1_7qsvf"]
+[ext_resource type="PackedScene" uid="uid://1mvbu4rwhvpn" path="res://segments/support_diagonal_1.glb" id="2_sm41p"]
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_ehghw"]
+points = PackedVector3Array(0.0750002, 0.5, 0.5, 0.0750002, 0.5, -0.5, -0.0749998, 0.5, 0.5, 0.0750002, -0.5, 0.5, -0.0749998, 0.5, -0.5, 0.0750002, -0.5, -0.5, -0.0749998, -0.5, 0.5, -0.0749998, -0.5, -0.5)
+
+[node name="RigidBody3D" type="RigidBody3D"]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource("1_7qsvf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("ConvexPolygonShape3D_ehghw")
+
+[node name="support_diagonal_1" parent="." instance=ExtResource("2_sm41p")]
+
+[editable path="support_diagonal_1"]
