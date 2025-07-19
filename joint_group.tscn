@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b7wey6jc377ii"]
+
+[ext_resource type="Script" uid="uid://crq4mwb2no2fn" path="res://JointGroup.cs" id="1_l1sf5"]
+[ext_resource type="Texture2D" uid="uid://qtd7x8cqfhqd" path="res://kenney_input-prompts_1.4/Generic/Vector/generic_button_circle_fill.svg" id="2_4k412"]
+
+[node name="JointGroup" type="Node3D" node_paths=PackedStringArray("_button")]
+script = ExtResource("1_l1sf5")
+_button = NodePath("Button")
+
+[node name="Button" type="Button" parent="."]
+offset_right = 8.0
+offset_bottom = 8.0
+icon = ExtResource("2_4k412")
+flat = true
