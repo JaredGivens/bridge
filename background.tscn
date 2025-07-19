@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://b3p0cy3w1fip4"]
+[gd_scene load_steps=17 format=3 uid="uid://djbbguwqq0xax"]
 
 [ext_resource type="Script" uid="uid://dx24ot83qn7do" path="res://Level.cs" id="1_b3bg0"]
 [ext_resource type="PackedScene" uid="uid://dbxj4gfhv565b" path="res://kenney_conveyor-kit/Models/GLB format/structure-wall.glb" id="2_8umsc"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://d1ejbyqxy2d4o" path="res://kenney_conveyor-kit/Models/GLB format/structure-window.glb" id="10_h3jlt"]
 [ext_resource type="PackedScene" uid="uid://bjfnk0tvetahh" path="res://kenney_conveyor-kit/Models/GLB format/cover-hopper.glb" id="11_ultoj"]
 [ext_resource type="PackedScene" uid="uid://bu7dgmc1b24tq" path="res://kenney_conveyor-kit/Models/GLB format/cover-stripe-bar.glb" id="12_f0kr8"]
+[ext_resource type="Script" uid="uid://di6ekfjplxym1" path="res://CameraController.cs" id="13_7kmkt"]
 [ext_resource type="Script" uid="uid://dpwy5obmdiqof" path="res://Editor.cs" id="13_u4o0g"]
 [ext_resource type="PackedScene" uid="uid://cam21eb4hvdge" path="res://levels/level1.tscn" id="14_8umsc"]
 
@@ -42,9 +43,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 7)
 [node name="structure-wall7" parent="Geometry" instance=ExtResource("2_8umsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12, 0, 7)
 
-[node name="floor2" parent="Geometry" instance=ExtResource("3_7kmkt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -13, 0, 4)
-
 [node name="conveyor-bars-stripe-fence" parent="Geometry" instance=ExtResource("4_livpj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11, 0, 7)
 
@@ -59,12 +57,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14, 0, 7)
 
 [node name="arrow2" parent="Geometry" instance=ExtResource("5_v7pi8")]
 transform = Transform3D(1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -11, 2, 7)
-
-[node name="floor3" parent="Geometry" instance=ExtResource("3_7kmkt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 0, 4)
-
-[node name="floor4" parent="Geometry" instance=ExtResource("3_7kmkt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -18, 0, 9)
 
 [node name="structure-wall8" parent="Geometry" instance=ExtResource("2_8umsc")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -16, 0, 9)
@@ -135,12 +127,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 10)
 [node name="structure-wall22" parent="Geometry" instance=ExtResource("2_8umsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -23, 0, 10)
 
-[node name="floor5" parent="Geometry" instance=ExtResource("3_7kmkt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -23, 0, 4)
-
-[node name="floor6" parent="Geometry" instance=ExtResource("3_7kmkt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -23, 0, 9)
-
 [node name="structure-wall23" parent="Geometry" instance=ExtResource("2_8umsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24, 0, 10)
 
@@ -155,9 +141,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 0, 7)
 
 [node name="structure-wall28" parent="Geometry" instance=ExtResource("2_8umsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7, 0, 7)
-
-[node name="floor7" parent="Geometry" instance=ExtResource("3_7kmkt")]
-transform = Transform3D(5, 0, 0, 0, 5, 0, 0, 0, 5, -8, 0, 4)
 
 [node name="structure-wall29" parent="Geometry" instance=ExtResource("2_8umsc")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6, 0, 7)
@@ -309,10 +292,15 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 2, 7)
 [node name="OmniLight3D3" type="OmniLight3D" parent="Geometry"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -19, 2, 10)
 
+[node name="floor11" parent="Geometry" instance=ExtResource("3_7kmkt")]
+transform = Transform3D(384.192, 0, 0, 0, 5, 0, 0, 0, 1295.49, -8, 0, -1)
+
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-1, 9.13817e-09, -8.69439e-08, 0, 0.994522, 0.104528, 8.74228e-08, 0.104528, -0.994522, 44, 15.4467, -8.8884)
-fov = 40.0
+transform = Transform3D(-1, 9.13817e-09, -8.69439e-08, 0, 0.994522, 0.104528, 8.74228e-08, 0.104528, -0.994522, 44, 0, -8.888)
+fov = 54.9
 size = 100.0
+script = ExtResource("13_7kmkt")
+perspectiveFOV = 90.0
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -324,6 +312,6 @@ _targetOrthoSize = 100.0
 _targetFov = 60.0
 
 [node name="Node3D" parent="." instance=ExtResource("14_8umsc")]
-transform = Transform3D(-17.08, 0, 1.49318e-06, 0, 17.08, 0, -1.49318e-06, 0, -17.08, 29.4723, -19.0703, 67.7727)
+transform = Transform3D(-17.08, 0, 1.49318e-06, 0, 17.08, 0, -1.49318e-06, 0, -17.08, 29.4723, -24.0703, 67.7727)
 
 [editable path="Geometry/robot-arm-b2"]
